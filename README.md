@@ -31,7 +31,7 @@ It helps users keep track of transactions, balances, customers, and monthly repo
 
 ```
 KhataPlus/
-│── app.py # Main Flask application
+│── main.py # Main Flask application
 │── templates/ # HTML templates
 │ ├── base.html
 │ ├── index.html
