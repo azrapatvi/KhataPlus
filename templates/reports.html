@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if message %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+   {{ message }}
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+<div class="container my-5">
+    <h2 class="mb-5 text-center fw-bold" style="color: #2c3e50;">
+        <i class="bi bi-file-earmark-text"></i> Reports
+    </h2>
+    
+    <form method="POST" action="{{ url_for('reports') }}" class="p-4 shadow-lg rounded-4" style="background: linear-gradient(135deg, #ffffff, #f8f9fa);">
+
+        <!-- Month Selector -->
+        <div class="mb-3">
+            <label for="date" class="form-label">Select Month</label>
+            <input type="month" class="form-control" id="date" name="selected_date" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid gap-2 col-6 mx-auto mb-5">
+            <button class="btn btn-primary" type="submit">
+                <i class="bi bi-calculator"></i> Show Total
+            </button>
+        </div>
+
+{% if total_amount is not none %}
+  {% if total_amount > 0 %}
+    <h3 class="text-center mb-5 text-danger">
+      Pending amount: ₹{{ "%.2f"|format(total_amount) }} for {{ selected_month }}
+      
+    </h3>
+  {% else %}
+    <h3 class="text-center mb-5 text-muted text-danger">
+      No expenses found for {{ selected_month }}
+    </h3>
+  {% endif %}
+{% endif %}
+       
+    </form>
+</div>
+
+{% endblock %}

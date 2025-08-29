@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block content %}  
+<!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="hero-title">Smart Accounting Made Simple</h1>
+                    <p class="hero-subtitle">Keep track of your money easily with KhataPlus - a simple app that helps you manage your accounts and expenses.</p>
+                    <div>
+                        <a href="{{ url_for('add_entry') }}" class="btn btn-light btn-lg hero-btn">
+                            <i class="bi bi-plus-circle me-2"></i>Start Adding Entries
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-calculator" style="font-size: 12rem; opacity: 0.1;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3" style="color: var(--text);">Why Choose KhataPlus?</h2>
+                <p class="lead" style="color: var(--text-light);">Powerful features designed to streamline your accounting workflow</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h3 class="mb-3" style="color: var(--text);">Lightning Fast</h3>
+                        <p style="color: var(--text-light);">Add entries, view balances, and generate reports in seconds. Our optimized interface ensures maximum productivity.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="mb-3" style="color: var(--text);">Secure & Reliable</h3>
+                        <p style="color: var(--text-light);">Your financial data is protected with enterprise-grade security. Regular backups ensure your data is always safe.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h3 class="mb-3" style="color: var(--text);">Smart Analytics</h3>
+                        <p style="color: var(--text-light);">Get insights into your financial health with detailed reports and visual analytics that help you make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section id="quick-actions" class="actions">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3" style="color: var(--text);">Quick Actions</h2>
+                <p class="lead" style="color: var(--text-light);">Jump right into managing your accounts</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="action-card" onclick="scrollTo('#add-entry')">
+                        <div class="action-icon">
+                            <i class="bi bi-plus-circle"></i>
+                        </div>
+                        <h3 class="mb-3" style="color: var(--text);">Add Entry</h3>
+                        <p style="color: var(--text-light);">Record new transactions, income, or expenses quickly and efficiently.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="action-card" onclick="scrollTo('#balances')">
+                        <div class="action-icon">
+                            <i class="bi bi-pie-chart"></i>
+                        </div>
+                        <h3 class="mb-3" style="color: var(--text);">View Balances</h3>
+                        <p style="color: var(--text-light);">Check your current account balances and financial position at a glance.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="action-card" onclick="scrollTo('#reports')">
+                        <div class="action-icon">
+                            <i class="bi bi-bar-chart"></i>
+                        </div>
+                        <h3 class="mb-3" style="color: var(--text);">Generate Reports</h3>
+                        <p style="color: var(--text-light);">Create detailed financial reports for analysis and record-keeping.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+{% endblock %}
+
+
+        
